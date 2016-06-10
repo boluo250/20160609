@@ -32,6 +32,7 @@ public:
 	{
 		if(this == &rhs)
 			return *this;
+		delete [] _pstr;
 		_pstr = new char[strlen(rhs._pstr)+1];
 		strcpy(_pstr,rhs._pstr);
 		cout << "String &operator=(const String&)" << endl;
